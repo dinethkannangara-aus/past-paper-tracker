@@ -447,7 +447,7 @@ export default function App() {
 
               <div className="paper-stack">
                 {subject.papers.length ? (
-                  {[...subject.papers].reverse().map((paper) => (
+                  [...subject.papers].reverse().map((paper) => (
                     <article className="paper-card" key={paper.id}>
                       <div className="paper-card-top">
                         <div>
@@ -479,7 +479,7 @@ export default function App() {
                         </p>
                       )}
                     </article>
-                  ))}
+                  ))
                 ) : (
                   <p className="empty-state">No papers for this subject yet.</p>
                 )}
